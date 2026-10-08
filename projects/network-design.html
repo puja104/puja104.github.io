@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Multi-Router Network Design | Puja Baral</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        nav {
+            padding: 20px 8%;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        nav a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 950px;
+            margin: auto;
+            padding: 70px 25px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 55px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #60a5fa;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            color: #94a3b8;
+            font-size: 18px;
+            max-width: 800px;
+        }
+
+        .card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            padding: 7px 13px;
+            background: #1e293b;
+            border-radius: 20px;
+            color: #cbd5e1;
+        }
+
+        ul {
+            margin-left: 25px;
+            color: #cbd5e1;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 50px;
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            ← Back to Portfolio
+        </a>
+
+    </nav>
+
+
+    <main>
+
+        <h1>Multi-Router Network Design</h1>
+
+        <p class="subtitle">
+            Cisco Packet Tracer · Networking · Subnetting · Static Routing
+        </p>
+
+
+        <p class="intro">
+
+            Designed and configured a four-router, four-LAN network
+            topology in Cisco Packet Tracer. The project focused on
+            IP addressing, subnetting, router configuration, and
+            establishing connectivity between multiple networks.
+
+        </p>
+
+
+        <h2>Project Overview</h2>
+
+        <div class="card">
+
+            <p>
+
+                The goal of this project was to design a network in which
+                multiple LAN segments could communicate across
+                point-to-point WAN connections.
+
+                Each LAN was assigned its own subnet, while /30 networks
+                were used for point-to-point router links.
+
+            </p>
+
+        </div>
+
+
+        <h2>What I Built</h2>
+
+        <div class="card">
+
+            <ul>
+
+                <li>
+                    Designed a four-router, four-LAN topology.
+                </li>
+
+                <li>
+                    Created IP addressing schemes for each LAN.
+                </li>
+
+                <li>
+                    Used /24 subnetting for LAN networks.
+                </li>
+
+                <li>
+                    Used /30 subnetting for point-to-point WAN links.
+                </li>
+
+                <li>
+                    Configured router interfaces using Cisco IOS CLI.
+                </li>
+
+                <li>
+                    Enabled interfaces using the
+                    <strong>no shutdown</strong> command.
+                </li>
+
+                <li>
+                    Configured static routes between non-adjacent networks.
+                </li>
+
+                <li>
+                    Tested connectivity between hosts across multiple
+                    routers.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <h2>Technologies & Tools</h2>
+
+        <div class="skills">
+
+            <span class="skill">Cisco Packet Tracer</span>
+
+            <span class="skill">Cisco IOS</span>
+
+            <span class="skill">IPv4</span>
+
+            <span class="skill">Subnetting</span>
+
+            <span class="skill">Static Routing</span>
+
+            <span class="skill">TCP/IP</span>
+
+            <span class="skill">LAN/WAN</span>
+
+        </div>
+
+
+        <h2>Network Configuration</h2>
+
+        <div class="card">
+
+            <p>
+
+                Router interfaces were configured with appropriate
+                IP addresses and subnet masks. After interface
+                configuration, static routes were added to allow
+                traffic to reach networks that were not directly
+                connected to each router.
+
+            </p>
+
+        </div>
+
+
+        <h2>Testing & Troubleshooting</h2>
+
+        <div class="card">
+
+            <p>
+
+                Connectivity was tested between hosts located on
+                different LAN segments. When connectivity issues
+                occurred, router interface status, IP addressing,
+                subnet masks, and routing configuration were reviewed
+                to identify the cause.
+
+            </p>
+
+        </div>
+
+
+        <h2>What This Project Demonstrates</h2>
+
+        <div class="card">
+
+            <ul>
+
+                <li>Understanding of IPv4 addressing</li>
+
+                <li>Subnetting and network segmentation</li>
+
+                <li>Basic Cisco IOS configuration</li>
+
+                <li>Static routing</li>
+
+                <li>LAN and WAN concepts</li>
+
+                <li>Network troubleshooting</li>
+
+                <li>Logical network design</li>
+
+            </ul>
+
+        </div>
+
+
+        <a class="back" href="../index.html">
+            ← Return to Portfolio
+        </a>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 Puja Baral
+
+    </footer>
+
+</body>
+
+</html>
