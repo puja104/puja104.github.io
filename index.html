@@ -3,142 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Puja Baral | IT & Cybersecurity</title>
-    <meta name="description" content="Puja Baral's IT and cybersecurity portfolio.">
+
+    <meta name="description"
+          content="Puja Baral's IT and cybersecurity portfolio featuring projects in cybersecurity, networking, technical support, and systems.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #0b1120;
+            color: #e5e7eb;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 8%;
+
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 85vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 80px 8%;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 80px);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: clamp(24px, 4vw, 40px);
+            color: #60a5fa;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 19px;
+            color: #94a3b8;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 12px 22px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 8%;
+            border-top: 1px solid #1e293b;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        .section-text {
+            max-width: 800px;
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 30px;
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        /* EXPERIENCE */
+
+        .experience-item {
+            max-width: 850px;
+            margin-bottom: 35px;
+            padding-left: 20px;
+            border-left: 3px solid #2563eb;
+        }
+
+        .experience-item h3 {
+            font-size: 21px;
+        }
+
+        .experience-item .date {
+            color: #60a5fa;
+            margin: 5px 0 10px;
+        }
+
+        .experience-item p {
+            color: #94a3b8;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 9px 15px;
+            border-radius: 20px;
+            background: #111827;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Puja Baral</h1>
-        <p>IT & Cybersecurity Professional</p>
+    <!-- NAVIGATION -->
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <nav>
+
+        <div class="logo">Puja Baral</div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <h1>Puja Baral</h1>
+
+        <h2>IT & Cybersecurity Professional</h2>
+
+        <p>
+            IT professional with hands-on experience across cybersecurity
+            operations, technical support, networking, systems administration,
+            and technology projects.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button primary" href="#projects">
+                View My Projects
+            </a>
+
+            <a class="button" href="#contact">
+                Contact Me
+            </a>
+
+        </div>
+
     </header>
 
-    <main>
 
-        <section id="hero">
-            <h2>IT, Cybersecurity & Technology</h2>
+    <!-- ABOUT -->
 
-            <p>
-                IT and cybersecurity professional with hands-on experience
-                in technical support, security operations, networking,
-                systems administration, and technology projects.
-            </p>
+    <section id="about">
 
-            <a href="#projects">View My Projects</a>
-        </section>
+        <h2 class="section-title">About Me</h2>
 
+        <p class="section-text">
 
-        <section id="about">
-            <h2>About Me</h2>
+            I'm a recent Penn State Mont Alto graduate with a B.S. in
+            Information Technology focused on Cybersecurity.
 
-            <p>
-                I'm a recent Penn State Mont Alto graduate with a B.S. in
-                Information Technology focused on Cybersecurity.
-            </p>
+            My experience spans IT service desk support, cybersecurity
+            operations, networking, systems administration, and technical
+            troubleshooting. I enjoy working through technical problems,
+            investigating security issues, and building practical technology
+            solutions.
 
-            <p>
-                My experience includes IT service desk support, cybersecurity
-                operations, networking, systems administration, and technical
-                troubleshooting.
-            </p>
-        </section>
+        </p>
+
+    </section>
 
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
+    <!-- PROJECTS -->
 
-            <article>
+    <section id="projects">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects">
+
+
+            <article class="project-card">
+
                 <h3>Multi-Router Network Design</h3>
+
                 <p>
-                    Designed and configured a multi-router network in Cisco
-                    Packet Tracer using subnetting, static routing, and
+                    Designed and configured a four-router network using
+                    Cisco Packet Tracer, subnetting, static routing, and
                     Cisco IOS commands.
                 </p>
+
+                <a class="project-link" href="#">
+                    View Project →
+                </a>
+
             </article>
 
-            <article>
-                <h3>Microsoft Sentinel Alert Investigation</h3>
+
+            <article class="project-card">
+
+                <h3>Microsoft Sentinel Investigation</h3>
+
                 <p>
-                    Investigated security alerts using Microsoft Sentinel
-                    and analyzed event data and indicators to identify
-                    potentially suspicious activity.
+                    Investigated security alerts using Microsoft Sentinel,
+                    analyzed event data, and reviewed indicators associated
+                    with potentially suspicious activity.
                 </p>
+
+                <a class="project-link" href="#">
+                    View Project →
+                </a>
+
             </article>
 
-            <article>
+
+            <article class="project-card">
+
                 <h3>Malware Static Analysis</h3>
+
                 <p>
-                    Performed static malware analysis using tools including
-                    Ghidra, PEiD, and VirusTotal to examine executable files
-                    and identify relevant indicators.
+                    Performed static analysis using Ghidra, PEiD, VirusTotal,
+                    strings analysis, and executable inspection techniques.
                 </p>
+
+                <a class="project-link" href="#">
+                    View Project →
+                </a>
+
             </article>
 
-            <article>
+
+            <article class="project-card">
+
                 <h3>Security Analytics Dashboard</h3>
+
                 <p>
                     Built a Power BI dashboard to organize and visualize
-                    security-related alert data.
+                    security alert data and identify useful trends.
                 </p>
+
+                <a class="project-link" href="#">
+                    View Project →
+                </a>
+
             </article>
 
-        </section>
+
+        </div>
+
+    </section>
 
 
-        <section id="experience">
-            <h2>Experience</h2>
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <h2 class="section-title">Experience</h2>
+
+
+        <div class="experience-item">
 
             <h3>IT Service Desk Analyst — Global Data Consultants</h3>
-            <p>Part-Time | 2026–Present</p>
+
+            <div class="date">
+                Part-Time · 2026–Present
+            </div>
+
+            <p>
+                Provide Tier 1 technical support for healthcare users,
+                troubleshooting hardware, software, application access,
+                authentication, and connectivity issues.
+            </p>
+
+        </div>
+
+
+        <div class="experience-item">
 
             <h3>IT Technician — Penn State Mont Alto</h3>
-            <p>2024–2025</p>
+
+            <div class="date">
+                2024–2025
+            </div>
+
+            <p>
+                Supported students, faculty, classrooms, Windows systems,
+                Microsoft 365, hardware, software, printers, and network
+                connectivity.
+            </p>
+
+        </div>
+
+
+        <div class="experience-item">
 
             <h3>Cybersecurity Intern — Altair Integrated Services</h3>
-            <p>2025</p>
+
+            <div class="date">
+                2025
+            </div>
+
+            <p>
+                Supported security operations through alert triage,
+                phishing analysis, URL investigation, IOC research,
+                and security data analysis.
+            </p>
+
+        </div>
+
+
+        <div class="experience-item">
 
             <h3>IT Service Desk Intern — Franklin County ITS</h3>
-            <p>2025</p>
 
-        </section>
-
-
-        <section id="skills">
-            <h2>Technical Skills</h2>
+            <div class="date">
+                2025
+            </div>
 
             <p>
-                ServiceNow · Active Directory · Microsoft 365 · Windows ·
-                Microsoft Sentinel · KQL · Proofpoint · Zscaler ·
-                Power BI · Wireshark · Nmap · Ghidra · VirusTotal ·
-                Cisco Packet Tracer · TCP/IP · DNS · DHCP · Subnetting
-            </p>
-        </section>
-
-
-        <section id="contact">
-            <h2>Contact</h2>
-
-            <p>
-                Interested in connecting? Reach out through LinkedIn.
+                Supported service desk operations, Windows imaging,
+                account administration, MFA, printers, and network-related
+                troubleshooting.
             </p>
 
-            <a href="YOUR-LINKEDIN-URL-HERE">LinkedIn</a>
-        </section>
+        </div>
 
-    </main>
+    </section>
 
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills">
+
+            <span class="skill">Microsoft Sentinel</span>
+            <span class="skill">KQL</span>
+            <span class="skill">ServiceNow</span>
+            <span class="skill">Active Directory</span>
+            <span class="skill">Microsoft 365</span>
+            <span class="skill">Windows</span>
+            <span class="skill">Cisco Packet Tracer</span>
+            <span class="skill">TCP/IP</span>
+            <span class="skill">DNS</span>
+            <span class="skill">DHCP</span>
+            <span class="skill">Subnetting</span>
+            <span class="skill">Wireshark</span>
+            <span class="skill">Nmap</span>
+            <span class="skill">Ghidra</span>
+            <span class="skill">VirusTotal</span>
+            <span class="skill">Proofpoint</span>
+            <span class="skill">Zscaler</span>
+            <span class="skill">Power BI</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>
+            Interested in discussing IT, cybersecurity, networking,
+            or technology opportunities?
+        </p>
+
+        <div class="buttons" style="justify-content: center;">
+
+            <!-- Replace this with your actual LinkedIn URL -->
+
+            <a class="button primary"
+               href="YOUR-LINKEDIN-URL-HERE"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
 
     <footer>
-        <p>© 2026 Puja Baral</p>
+
+        <p>
+            © 2026 Puja Baral · IT & Cybersecurity Portfolio
+        </p>
+
     </footer>
 
 </body>
